@@ -1,0 +1,56 @@
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: inherit; font-weight: inherit !important; }
+
+html { font-size: 62.5%; overflow-x: hidden; }
+
+body { font-family: Montserrat, sans-serif; box-sizing: border-box; font-weight: 400 !important; }
+
+a{ text-decoration: none !important; }
+
+.white{ color: $text-color-light; }
+.purple{ color: $text-color-purple; }
+.h1-heading{ font-size: 6rem; font-weight: 700 !important; margin-bottom: 7.3rem;}
+.h2-heading{ font-size: 1.6rem; font-weight: 800 !important; color: $bg-color-purple; }
+.h5-heading{ font-size: 2rem; font-weight: 800 !important; color: $text-color-purple; }
+.paragraph{ font-size: 1.6rem; line-height: 3rem; &.big{ font-size: 2rem; }
+  &.light{ color: $text-color-light-2; }
+  &.dark{ color: $text-color-dark; } 
+}
+
+.button{ width: 21.5rem; height: 5.9rem; display: block; background-color: $text-color-purple; border-radius: 8rem; position: relative;
+  font-size: 1.8rem; font-weight: 800 !important; color: $text-color-light; border: 2px solid $text-color-purple; @include animateIt;
+  &:hover{ background-color: transparent; color: $text-color-purple; }
+  span{ @include absoluteCenter; }
+}
+
+@media (min-width: 991.98px) {
+  .col-lg-6{ padding-left: 8rem; }
+}
+
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+
+  > .col,
+  > [class*="col-"] {
+
+    padding-right: 0;
+    padding-left: 0;
+
+    @media (min-width: 991.98px) {
+      &:not(:first-child):not(:last-child) {
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+      }
+
+      &:first-child {
+        padding-right: 1.5rem;
+      }
+
+      &:last-child {
+        padding-left: 1.5rem;
+      }
+    }
+
+  }
+}

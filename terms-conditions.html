@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Ebook</title>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="assets/favicon/site.webmanifest">
+
+  <!--stylesheet-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800,900&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+  <!--preloader start-->
+  <div class="preloader">
+    <svg class="preloader__svg" width="307" height="47" viewBox="0 0 307 47" fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <path class="preloader__svg-path" d="M0.311996 1.2H10.68V37.552H33.144V46H0.311996V1.2Z" stroke="white"
+        stroke-width="2" />
+      <path class="preloader__svg-path"
+        d="M59.883 46.768C55.2323 46.768 51.0297 45.7653 47.275 43.76C43.563 41.7547 40.6403 39.0027 38.507 35.504C36.4163 31.9627 35.371 27.9947 35.371 23.6C35.371 19.2053 36.4163 15.2587 38.507 11.76C40.6403 8.21866 43.563 5.44533 47.275 3.44C51.0297 1.43467 55.2323 0.431999 59.883 0.431999C64.5337 0.431999 68.715 1.43467 72.427 3.44C76.139 5.44533 79.0617 8.21866 81.195 11.76C83.3283 15.2587 84.395 19.2053 84.395 23.6C84.395 27.9947 83.3283 31.9627 81.195 35.504C79.0617 39.0027 76.139 41.7547 72.427 43.76C68.715 45.7653 64.5337 46.768 59.883 46.768ZM59.883 37.936C62.5283 37.936 64.9177 37.3387 67.051 36.144C69.1843 34.9067 70.8483 33.2 72.043 31.024C73.2803 28.848 73.899 26.3733 73.899 23.6C73.899 20.8267 73.2803 18.352 72.043 16.176C70.8483 14 69.1843 12.3147 67.051 11.12C64.9177 9.88267 62.5283 9.264 59.883 9.264C57.2377 9.264 54.8483 9.88267 52.715 11.12C50.5817 12.3147 48.8963 14 47.659 16.176C46.4643 18.352 45.867 20.8267 45.867 23.6C45.867 26.3733 46.4643 28.848 47.659 31.024C48.8963 33.2 50.5817 34.9067 52.715 36.144C54.8483 37.3387 57.2377 37.936 59.883 37.936Z"
+        stroke="white" stroke-width="2" />
+      <path class="preloader__svg-path"
+        d="M121.066 36.4H100.266L96.298 46H85.674L105.642 1.2H115.882L135.914 46H125.034L121.066 36.4ZM117.802 28.528L110.698 11.376L103.594 28.528H117.802Z"
+        stroke="white" stroke-width="2" />
+      <path class="preloader__svg-path"
+        d="M140.562 1.2H160.914C165.778 1.2 170.066 2.13866 173.778 4.016C177.533 5.85066 180.434 8.45333 182.482 11.824C184.573 15.1947 185.618 19.12 185.618 23.6C185.618 28.08 184.573 32.0053 182.482 35.376C180.434 38.7467 177.533 41.3707 173.778 43.248C170.066 45.0827 165.778 46 160.914 46H140.562V1.2ZM160.402 37.488C164.882 37.488 168.445 36.2507 171.09 33.776C173.778 31.2587 175.122 27.8667 175.122 23.6C175.122 19.3333 173.778 15.9627 171.09 13.488C168.445 10.9707 164.882 9.712 160.402 9.712H150.93V37.488H160.402Z"
+        stroke="white" stroke-width="2" />
+      <path class="preloader__svg-path" d="M193.437 1.2H203.805V46H193.437V1.2Z" stroke="white" stroke-width="2" />
+      <path class="preloader__svg-path"
+        d="M255.525 1.2V46H247.013L224.677 18.8V46H214.437V1.2H223.013L245.285 28.4V1.2H255.525Z" stroke="white"
+        stroke-width="2" />
+      <path class="preloader__svg-path"
+        d="M296.396 22.896H305.868V41.072C303.436 42.9067 300.62 44.3147 297.42 45.296C294.22 46.2773 290.999 46.768 287.756 46.768C283.106 46.768 278.924 45.7867 275.212 43.824C271.5 41.8187 268.578 39.0667 266.444 35.568C264.354 32.0267 263.308 28.0373 263.308 23.6C263.308 19.1627 264.354 15.1947 266.444 11.696C268.578 8.15467 271.522 5.40267 275.276 3.44C279.031 1.43467 283.255 0.431999 287.948 0.431999C291.874 0.431999 295.436 1.09333 298.636 2.416C301.836 3.73866 304.524 5.65866 306.7 8.176L300.044 14.32C296.844 10.9493 292.983 9.264 288.46 9.264C285.602 9.264 283.063 9.86133 280.844 11.056C278.626 12.2507 276.898 13.936 275.66 16.112C274.423 18.288 273.804 20.784 273.804 23.6C273.804 26.3733 274.423 28.848 275.66 31.024C276.898 33.2 278.604 34.9067 280.78 36.144C282.999 37.3387 285.516 37.936 288.332 37.936C291.319 37.936 294.007 37.296 296.396 36.016V22.896Z"
+        stroke="white" stroke-width="2" />
+    </svg>
+  </div>
+  <!--preloader end-->
+
+  <!--header section start-->
+  <header class="header">
+    <div class="container">
+      <div class="header__wrapper">
+        <div class="header__logo">
+          <a href="index.html">
+            <img src="assets/images/logo.png" alt="logo">
+          </a>
+        </div>
+        <div class="header__nav">
+          <ul class="header__nav-primary">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">chapters</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Download</a></li>
+          </ul>
+          <span><i class="fas fa-times"></i></span>
+        </div>
+        <div class="header__bars">
+          <div class="header__bars-bar header__bars-bar-1"></div>
+          <div class="header__bars-bar header__bars-bar-2"></div>
+          <div class="header__bars-bar header__bars-bar-3"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!--header section end-->
+
+
+  <!--author start-->
+  <section class="author">
+    <div class="container">
+      <div class="row justify-content-end">
+          <div class="author__info">
+            <h1 class="h1-heading">Terms & Conditions</h1>
+            <p class="paragraph big dark">Welcome to Wealth Protection Guide!</p>
+
+<p class="paragraph big dark">These terms and conditions outline the rules and regulations for the use of Concise Strategists's Website, located at https://wealthprotectionguide.com.</p>
+
+<p class="paragraph big dark">By accessing this website we assume you accept these terms and conditions. Do not continue to use Wealth Protection Guide if you do not agree to take all of the terms and conditions stated on this page.</p>
+
+<p class="paragraph big dark">The following terminology applies to these Terms and Conditions, Privacy Statement and Disclaimer Notice and all Agreements: "Client", "You" and "Your" refers to you, the person log on this website and compliant to the Company’s terms and conditions. "The Company", "Ourselves", "We", "Our" and "Us", refers to our Company. "Party", "Parties", or "Us", refers to both the Client and ourselves. All terms refer to the offer, acceptance and consideration of payment necessary to undertake the process of our assistance to the Client in the most appropriate manner for the express purpose of meeting the Client’s needs in respect of provision of the Company’s stated services, in accordance with and subject to, prevailing law of Netherlands. Any use of the above terminology or other words in the singular, plural, capitalization and/or he/she or they, are taken as interchangeable and therefore as referring to same.</p>
+
+<h2 class="h2-heading"><strong>Cookies</strong></h2>
+
+<p class="paragraph big dark">We employ the use of cookies. By accessing Wealth Protection Guide, you agreed to use cookies in agreement with the Concise Strategists's Privacy Policy.</p>
+
+<p class="paragraph big dark">Most interactive websites use cookies to let us retrieve the user’s details for each visit. Cookies are used by our website to enable the functionality of certain areas to make it easier for people visiting our website. Some of our affiliate/advertising partners may also use cookies.</p>
+
+<h2 class="h2-heading"><strong>License</strong></h2>
+
+<p class="paragraph big dark">Unless otherwise stated, Concise Strategists and/or its licensors own the intellectual property rights for all material on Wealth Protection Guide. All intellectual property rights are reserved. You may access this from Wealth Protection Guide for your own personal use subjected to restrictions set in these terms and conditions.</p>
+
+<p class="paragraph big dark">You must not:</p>
+<ul>
+    <li>Republish material from Wealth Protection Guide</li>
+    <li>Sell, rent or sub-license material from Wealth Protection Guide</li>
+    <li>Reproduce, duplicate or copy material from Wealth Protection Guide</li>
+    <li>Redistribute content from Wealth Protection Guide</li>
+</ul>
+
+<p class="paragraph big dark">This Agreement shall begin on the date hereof.</p>
+
+<p class="paragraph big dark">Parts of this website offer an opportunity for users to post and exchange opinions and information in certain areas of the website. Concise Strategists does not filter, edit, publish or review Comments prior to their presence on the website. Comments do not reflect the views and opinions of Concise Strategists,its agents and/or affiliates. Comments reflect the views and opinions of the person who post their views and opinions. To the extent permitted by applicable laws, Concise Strategists shall not be liable for the Comments or for any liability, damages or expenses caused and/or suffered as a result of any use of and/or posting of and/or appearance of the Comments on this website.</p>
+
+<p class="paragraph big dark">Concise Strategists reserves the right to monitor all Comments and to remove any Comments which can be considered inappropriate, offensive or causes breach of these Terms and Conditions. Our Terms and Conditions were created with the help of the <a href="https://www.terms-conditions-generator.com">Terms Conditions Generator</a> and the <a href="https://www.generateprivacypolicy.com">Privacy Policy Generator</a>.</p>
+
+<p class="paragraph big dark">You warrant and represent that:</p>
+
+<ul>
+    <li>You are entitled to post the Comments on our website and have all necessary licenses and consents to do so;</li>
+    <li>The Comments do not invade any intellectual property right, including without limitation copyright, patent or trademark of any third party;</li>
+    <li>The Comments do not contain any defamatory, libelous, offensive, indecent or otherwise unlawful material which is an invasion of privacy</li>
+    <li>The Comments will not be used to solicit or promote business or custom or present commercial activities or unlawful activity.</li>
+</ul>
+
+<p class="paragraph big dark">You hereby grant Concise Strategists a non-exclusive license to use, reproduce, edit and authorize others to use, reproduce and edit any of your Comments in any and all forms, formats or media.</p>
+
+<h2 class="h2-heading"><strong>Hyperlinking to our Content</strong></h2>
+
+<p class="paragraph big dark">The following organizations may link to our Website without prior written approval:</p>
+
+<ul>
+    <li>Government agencies;</li>
+    <li>Search engines;</li>
+    <li>News organizations;</li>
+    <li>Online directory distributors may link to our Website in the same manner as they hyperlink to the Websites of other listed businesses; and</li>
+    <li>System wide Accredited Businesses except soliciting non-profit organizations, charity shopping malls, and charity fundraising groups which may not hyperlink to our Web site.</li>
+</ul>
+
+<p class="paragraph big dark">These organizations may link to our home page, to publications or to other Website information so long as the link: (a) is not in any way deceptive; (b) does not falsely imply sponsorship, endorsement or approval of the linking party and its products and/or services; and (c) fits within the context of the linking party’s site.</p>
+
+<p class="paragraph big dark">We may consider and approve other link requests from the following types of organizations:</p>
+
+<ul>
+    <li>commonly-known consumer and/or business information sources;</li>
+    <li>dot.com community sites;</li>
+    <li>associations or other groups representing charities;</li>
+    <li>online directory distributors;</li>
+    <li>internet portals;</li>
+    <li>accounting, law and consulting firms; and</li>
+    <li>educational institutions and trade associations.</li>
+</ul>
+
+<p class="paragraph big dark">We will approve link requests from these organizations if we decide that: (a) the link would not make us look unfavorably to ourselves or to our accredited businesses; (b) the organization does not have any negative records with us; (c) the benefit to us from the visibility of the hyperlink compensates the absence of Concise Strategists; and (d) the link is in the context of general resource information.</p>
+
+<p class="paragraph big dark">These organizations may link to our home page so long as the link: (a) is not in any way deceptive; (b) does not falsely imply sponsorship, endorsement or approval of the linking party and its products or services; and (c) fits within the context of the linking party’s site.</p>
+
+<p class="paragraph big dark">If you are one of the organizations listed in paragraph 2 above and are interested in linking to our website, you must inform us by sending an e-mail to Concise Strategists. Please include your name, your organization name, contact information as well as the URL of your site, a list of any URLs from which you intend to link to our Website, and a list of the URLs on our site to which you would like to link. Wait 2-3 weeks for a response.</p>
+
+<p class="paragraph big dark">Approved organizations may hyperlink to our Website as follows:</p>
+
+<ul>
+    <li>By use of our corporate name; or</li>
+    <li>By use of the uniform resource locator being linked to; or</li>
+    <li>By use of any other description of our Website being linked to that makes sense within the context and format of content on the linking party’s site.</li>
+</ul>
+
+<p class="paragraph big dark">No use of Concise Strategists's logo or other artwork will be allowed for linking absent a trademark license agreement.</p>
+
+<h2 class="h2-heading"><strong>iFrames</strong></h2>
+
+<p class="paragraph big dark">Without prior approval and written permission, you may not create frames around our Webpages that alter in any way the visual presentation or appearance of our Website.</p>
+
+<h2 class="h2-heading"><strong>Content Liability</strong></h2>
+
+<p class="paragraph big dark">We shall not be hold responsible for any content that appears on your Website. You agree to protect and defend us against all claims that is rising on your Website. No link(s) should appear on any Website that may be interpreted as libelous, obscene or criminal, or which infringes, otherwise violates, or advocates the infringement or other violation of, any third party rights.</p>
+
+<h2 class="h2-heading"><strong>Your Privacy</strong></h2>
+
+<p class="paragraph big dark">Please read Privacy Policy</p>
+
+<h2 class="h2-heading"><strong>Reservation of Rights</strong></h2>
+
+<p class="paragraph big dark">We reserve the right to request that you remove all links or any particular link to our Website. You approve to immediately remove all links to our Website upon request. We also reserve the right to amen these terms and conditions and it’s linking policy at any time. By continuously linking to our Website, you agree to be bound to and follow these linking terms and conditions.</p>
+
+<h2 class="h2-heading"><strong>Removal of links from our website</strong></h2>
+
+<p class="paragraph big dark">If you find any link on our Website that is offensive for any reason, you are free to contact and inform us any moment. We will consider requests to remove links but we are not obligated to or so or to respond to you directly.</p>
+
+<p class="paragraph big dark">We do not ensure that the information on this website is correct, we do not warrant its completeness or accuracy; nor do we promise to ensure that the website remains available or that the material on the website is kept up to date.</p>
+
+<h2 class="h2-heading"><strong>Disclaimer</strong></h2>
+
+<p class="paragraph big dark">To the maximum extent permitted by applicable law, we exclude all representations, warranties and conditions relating to our website and the use of this website. Nothing in this disclaimer will:</p>
+
+<ul>
+    <li>limit or exclude our or your liability for death or personal injury;</li>
+    <li>limit or exclude our or your liability for fraud or fraudulent misrepresentation;</li>
+    <li>limit any of our or your liabilities in any way that is not permitted under applicable law; or</li>
+    <li>exclude any of our or your liabilities that may not be excluded under applicable law.</li>
+</ul>
+
+<p class="paragraph big dark">The limitations and prohibitions of liability set in this Section and elsewhere in this disclaimer: (a) are subject to the preceding paragraph; and (b) govern all liabilities arising under the disclaimer, including liabilities arising in contract, in tort and for breach of statutory duty.</p>
+
+<p class="paragraph big dark">As long as the website and the information and services on the website are provided free of charge, we will not be liable for any loss or damage of any nature.</p>
+            
+          </div>
+        </div>
+      </div>
+  </section>
+  <!--author end-->
+
+  <!--footer start-->
+  <footer class="footer">
+    <div class="container">
+      <div class="book-footer">
+        <img src="assets/images/book.png" alt="image">
+      </div>
+      <div class="row justify-content-end">
+        <div class="col-lg-6">
+          <div class="footer__info">
+            <h5 class="h5-heading">Download Now:</h5>
+            <h1 class="h1-heading white">Get Your Free
+              2021 Wealth Protection Guide</h1>
+            <form action="post">
+              <input type="text" placeholder="First Name" >
+              <input type="text" placeholder="Last Name">
+              <input type="tel" placeholder="Phone" >
+			  <input type="email" placeholder="E-Mail Address">	
+              <a href="#" class="button"><span>DOWNLOAD</span></a>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="footer__copy">
+        <h6 class="h6-heading copy">&copy; 2021 WealthProtectionGuide.com. All Rights Reserved </h6>
+      </div>
+    </div>
+	<div align="center">
+	  <a target="_blank" href="https://shareasale.com/r.cfm?b=1702269&amp;u=2110102&amp;m=100834&amp;urllink=&amp;afftrack="><img src="https://static.shareasale.com/image/100834/hp-banner-728x90-L-money-decoder-v1.0.jpg" border="0" /></a>
+	</div>
+  </footer>
+  <!--footer end-->
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script>
+    $(window).on('load', function () {
+      $("body").addClass("loaded");
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/i18n/defaults-*.min.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+
+</html>
